@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* SCROLLBAR PERSONALIZADA */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 #f1f5f9;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.green-filter {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(94%) contrast(101%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
