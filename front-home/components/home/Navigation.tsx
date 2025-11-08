@@ -6,90 +6,96 @@ export function Navigation() {
   const [activePage, setActivePage] = useState('home')
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-3">
-      <div className="flex justify-around items-center max-w-md mx-auto">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 sm:py-3">
+      <div className="flex justify-around items-center max-w-md mx-auto px-2 sm:px-4">
         {/* Ícone Home */}
         <button 
-          className={`flex flex-col items-center p-2 cursor-pointer relative ${
-            activePage === 'home' ? 'text-green-600' : 'text-gray-600'
+          className={`flex flex-col items-center p-1 sm:p-2 cursor-pointer relative select-none ${
+            activePage === 'home' 
+            ? 'text-green-600' 
+            : 'text-gray-600'
           }`}
           onClick={() => setActivePage('home')}
         >
-          <div className={`p-2 rounded-full transition-all ${
+          <div className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 ${
             activePage === 'home' 
-              ? 'bg-green-100' 
-              : 'hover:bg-green-50'
+              ? 'bg-green-100 text-white' 
+              : 'bg-white hover:bg-green-200 active:bg-green-300'
           }`}>
             <img 
               src="/icons/home.png" 
               alt="Home" 
-              className="w-6 h-6 filter brightness-0"
+              className="w-5 h-5 sm:w-6 sm:h-6 filter brightness-0"
             />
           </div>
-          <span className="text-xs font-medium mt-1">Home</span>
+          <span className="text-[10px] xs:text-xs font-medium mt-0.5 sm:mt-1">Home</span>
         </button>
 
-        {/* Ícone Livros */}
+        {/* Ícone Ranking */}
         <button 
-          className={`flex flex-col items-center p-2 cursor-pointer relative ${
+          className={`flex flex-col items-center p-1 sm:p-2 cursor-pointer relative select-none ${
             activePage === 'livros' ? 'text-green-600' : 'text-gray-600'
           }`}
           onClick={() => setActivePage('livros')}
         >
-          <div className={`p-2 rounded-full transition-all ${
+          <div className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 ${
             activePage === 'livros' 
-              ? 'bg-green-100' 
-              : 'hover:bg-green-50'
+              ? 'bg-green-100 text-white' 
+              : 'bg-white hover:bg-green-200 active:bg-green-300'
           }`}>
             <img 
               src="/icons/throphy.png" 
               alt="Ranking" 
-              className="w-6 h-6 filter brightness-0"
+              className="w-5 h-5 sm:w-6 sm:h-6 filter brightness-0"
             />
           </div>
-          <span className="text-xs font-medium mt-1">Ranking</span>
+          <span className="text-[10px] xs:text-xs font-medium mt-0.5 sm:mt-1">Ranking</span>
         </button>
 
- 
+        {/* Ícone Sua Estante */}
         <button 
-          className={`flex flex-col items-center p-2 cursor-pointer relative ${
-            activePage === 'amigos' ? 'text-green-600' : 'text-gray-600'
+          className={`flex flex-col items-center p-1 sm:p-2 cursor-pointer select-none ${
+            activePage === 'Sua Estante' 
+            ? 'text-green-600' 
+            : 'text-gray-600'
           }`}
-          onClick={() => setActivePage('amigos')}
+          onClick={() => setActivePage('Sua Estante')}
         >
-          <div className={`p-2 rounded-full transition-all ${
-            activePage === 'amigos' 
-              ? 'bg-green-100' 
-              : 'hover:bg-green-50'
+          <div className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 ${
+            activePage === 'Sua Estante' 
+              ? 'bg-green-100 text-white' 
+              : 'bg-white hover:bg-green-200 active:bg-green-300'
           }`}>
             <img 
               src="/icons/books.png" 
               alt="Sua Estante" 
-              className="w-6 h-6 filter brightness-0"
+              className="w-5 h-5 sm:w-6 sm:h-6 filter brightness-0"
             />
           </div>
-          <span className="text-xs font-medium mt-1">Sua Estante</span>
+          <span className="text-[10px] xs:text-xs font-medium mt-0.5 sm:mt-1">Sua Estante</span>
         </button>
 
         {/* Ícone Perfil */}
         <button 
-          className={`flex flex-col items-center p-2 cursor-pointer relative ${
-            activePage === 'perfil' ? 'text-green-600' : 'text-gray-600'
+          className={`flex flex-col items-center p-1 sm:p-2 cursor-pointer relative select-none ${
+            activePage === 'perfil' 
+            ? 'text-green-600' 
+            : 'text-gray-600'
           }`}
           onClick={() => setActivePage('perfil')}
         >
-          <div className={`p-2 rounded-full transition-all ${
+          <div className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 ${
             activePage === 'perfil' 
-              ? 'bg-green-100' 
-              : 'hover:bg-green-50'
+              ? 'bg-green-100 text-white' 
+              : 'bg-white hover:bg-green-200 active:bg-green-300'
           }`}>
             <img 
               src="/icons/person.png" 
               alt="Perfil" 
-              className="w-6 h-6 filter brightness-0"
+              className="w-5 h-5 sm:w-6 sm:h-6 filter brightness-0"
             />
           </div>
-          <span className="text-xs font-medium mt-1">Perfil</span>
+          <span className="text-[10px] xs:text-xs font-medium mt-0.5 sm:mt-1">Perfil</span>
         </button>
       </div>
     </nav>

@@ -7,12 +7,21 @@ import { Navigation } from '@/components/home/Navigation'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 p-4 pb-24">
+    <main className="min-h-screen bg-gray-50 pb-24">
+      {/* Header fixo */}
       <Header />
-      <Calendar />
-      <Progresso />
-      <AtividadeAmigos />
-      <SeusLivros />
+      
+      <div className="pt-24 px-4 pb-8">
+        {/* Container centralizado */}
+        <div className="w-full max-w-5xl mx-auto">
+          <Calendar />
+          <Progresso />
+          <AtividadeAmigos />
+          <SeusLivros />
+        </div>
+      </div>
+
+      {/* Navegação fixa */}
       <Navigation />
     </main>
   )

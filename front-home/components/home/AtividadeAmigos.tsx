@@ -51,7 +51,7 @@ export function AtividadeAmigos() {
       <div 
         ref={containerRef}
             onMouseDown={handleMouseDown}
-        className="flex gap-4 overflow-x-auto pb-4 cursor-pointer select-none scrollbar-hide">
+        className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 cursor-pointer select-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {friends.map((friend, index) => (
             <div key={index} className="bg-white rounded-2xl p-4 shadow-sm min-w-64 flex-shrink-0">
                 <h3 className="font-semibold text-gray-900 text-base mb-2">

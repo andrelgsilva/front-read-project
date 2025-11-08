@@ -3,7 +3,7 @@
 /* SCROLLBAR PERSONALIZADA */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #10b981 #f1f5f9;
+  scrollbar-color: #bfbfbf #f1f5f9;
 }
 
 html::-webkit-scrollbar {
